@@ -1,0 +1,7 @@
+Failing Packaage          Reason 
+
+bash                      bash 4.3-11 Failed [CLANG_ERROR/CLANG_LD_ERROR] clang: error: linker command failed with exit code 1
+mawk                      awk 1.3.3-17 Failed [GCC_ERROR] print.c:85:11: error: expected parameter declarator
+sysvinit                  sysvinit 2.88dsf-58 Failed [CLANG_ERROR] clang: error: cannot specify -o when generating multiple output file
+insserv                   insserv 1.14.0-5 Failed [GCC_ERROR] insserv.c:1001:5: error: use of undeclared identifier 'extension'
+ustr                      ustr 1.0.4-3 Failed [CLANG_ERROR/CLANG_LD_ERROR] ustr-main.h:945: multiple definition of `ustr_add_cstr'
