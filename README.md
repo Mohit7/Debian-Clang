@@ -22,6 +22,8 @@ Adding this repository to host tasks to be performed before coding period
   Which I have uploaded as required.list.
 
 - Now to find which packages require fixes, we can use data from clang.debian.net
-  project, for now I have listed some of these in failng.list
+  project, for now I have listed some of these in failing.list
   
+#Task 2: A patch to fix a bug
 
+- I have tried to fix Bug #777914 for insserv with patch undeclare_identifier.patch
