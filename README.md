@@ -78,3 +78,26 @@ Shows that device /dev/cdrom having iso9660 type will mount at default mount poi
 # dpkg-reconfigure tzdata
 ```
 - add hostname in /etc/hostname and /etc/hosts
+- Install locales package and configure it:
+```sh
+# aptitude install locales
+# dpkg-reconfigure locales
+```
+
+######Install kernel:
+- To find available kernels:
+```sh
+# apt-cache search linux-image
+```
+- Now install appropriate one
+```sh
+# aptitude install linux-image-arch-etc
+```
+
+######Set up the Boot Loader:
+- install grub2:
+```sh
+# aptitude install grub-pc
+# grub-install /dev/hda
+# update-grub
+```
