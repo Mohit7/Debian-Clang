@@ -26,7 +26,7 @@ Adding this repository to host tasks to be performed before coding period:
 
 ####Task 2: A patch to fix a bug:
 
-- I have tried to fix [Bug #777914](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=777914 "insserv bug") for insserv with patch [undeclare_identifier.patch](https://github.com/Mohit7/Debian-Clang/blob/master/undeclare_identifier.patch "insserv patch").
+- I have tried to fix [Bug #777914](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=777914 "insserv bug") for insserv with patch [undeclare_identifier.patch](https://github.com/Mohit7/Debian-Clang/blob/master/161_bts777914_fix_undeclared_identifier.patch "insserv patch").
 
 ####Task 3: Steps to make a bootable Debian:
 ######Create root file system (rootfs) :
