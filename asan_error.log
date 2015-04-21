@@ -1,0 +1,46 @@
+=================================================================
+==10760==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffffd0dfe14 at pc 0x400e85 bp 0x7ffffd0dfbf0 sp 0x7ffffd0dfbe8
+READ of size 4 at 0x7ffffd0dfe14 thread T0
+    #0 0x400e84 in main (/home/mohit/soc15/hello-2.10/hello+0x400e84)
+    #1 0x7f8dfdcadb44 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b44)
+    #2 0x400cb8 (/home/mohit/soc15/hello-2.10/hello+0x400cb8)
+
+Address 0x7ffffd0dfe14 is located in stack of thread T0 at offset 500 in frame
+    #0 0x400d95 in main (/home/mohit/soc15/hello-2.10/hello+0x400d95)
+
+  This frame has 2 object(s):
+    [32, 40) 'greeting_msg'
+    [96, 496) 'stack_array' <== Memory access at offset 500 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow ??:0 main
+Shadow bytes around the buggy address:
+  0x10007fa13f70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa13f80: 00 00 00 00 f1 f1 f1 f1 00 f4 f4 f4 f2 f2 f2 f2
+  0x10007fa13f90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa13fa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa13fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10007fa13fc0: 00 00[f4]f4 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x10007fa13fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa13fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa13ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa14000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fa14010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Heap right redzone:      fb
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack partial redzone:   f4
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Contiguous container OOB:fc
+  ASan internal:           fe
+==10760==ABORTING
